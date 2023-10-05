@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+
 if __name__ == "__main__":
-    from sys import argv
-    add = 0
-    for s in argv[1:]:
-        add += int(s)
-        print("{}".format(add))
+    """Print the addition of all arguments."""
+    import sys
+
+    ad = 0
+    for x in sys.argv:
+        if x != sys.argv[0]:
+            ad += int(x)
+    print(ad)
