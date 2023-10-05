@@ -6,3 +6,7 @@ if __name__ == "__main__":
     if n != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
+    ar_op = {"+": add, "-": sub, "*": mul, "/": div}
+    if sys.argv[2] not in ar_op.keys():
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
