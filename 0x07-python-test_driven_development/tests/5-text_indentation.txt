@@ -1,0 +1,107 @@
+5-text_indentation
+How to use text_indentation
+
+Importing the function from the module:
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+To check for module docstring:
+	 >>> x = __import__("5-text_indentation").__doc__
+	 >>> len(x) > 1
+	 True
+
+To check for function docstring:
+	 >>> y = __import__("5-text_indentation").text_indentation.__doc__
+         >>> len(y) > 1
+         True
+
+To check for no args:
+	 >>> text_indentation()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+To check for too many args:
+	 >>> text_indentation("Deiaa", "Maher")
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+To check for passing None:
+	 >>> text_indentation(None)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: text must be a string
+
+To check for passing non-string type:
+	 >>> text_indentation(1)
+         Traceback (most recent call last):
+         ...
+         TypeError: text must be a string
+
+To check for ending inspecial and non-special char:
+         >>> text_indentation("""Is science important for fevelopment of nations?Science, the bedrock of progress, plays a pivotal role in the development of nations. Its importance cannot be overstated. Through the relentless pursuit of knowledge and understanding: science empowers societies to grow and evolve in myriad ways. First and foremost, science is the driving force behind innovation and technological advancements. It fuels the creation of new technologies that improve the quality of life, drive economic growth, and provide solutions to complex problems. The steady march of scientific discovery has given rise to revolutionary breakthroughs in medicine, communication, transportation, and countless other fields. now: what do think about science? is it important? thank you""")
+         Is science important for fevelopment of nations?
+         <BLANKLINE>
+         Science, the bedrock of progress, plays a pivotal role in the development of nations.
+         <BLANKLINE>
+         Its importance cannot be overstated.
+         <BLANKLINE>
+         Through the relentless pursuit of knowledge and understanding:
+         <BLANKLINE>
+          science empowers societies to grow and evolve in myriad ways.
+         <BLANKLINE>
+         First and foremost, science is the driving force behind innovation and technological advancements.
+         <BLANKLINE>
+         It fuels the creation of new technologies that improve the quality of life, drive economic growth, and provide solutions to complex problems.
+         <BLANKLINE>
+         The steady march of scientific discovery has given rise to revolutionary breakthroughs in medicine, communication, transportation, and countless other fields.
+         <BLANKLINE>
+         now:
+         <BLANKLINE>
+         what do think about science?
+         <BLANKLINE>
+         is it important?
+         <BLANKLINE>
+         thank you
+
+To check for multiple spaces:
+	 >>> text_indentation("        Hello.   what is your name?      ")
+	 Hello.
+	 <BLANKLINE>
+	 what is your name?
+	 <BLANKLINE>
+
+To check for standalone special chars:
+	 >>> text_indentation(" . ? : ")
+	 .
+	 <BLANKLINE>
+	 ?
+	 <BLANKLINE>
+	 :
+	 <BLANKLINE>
+
+To check for one word:
+	 >>> text_indentation("Hi")
+	 Hi
+
+To check for newline at beginning:
+	 >>> text_indentation(" \n Hay. what is your name?")
+	 <BLANKLINE>
+	  Hay.
+	 <BLANKLINE>
+	 what is your name?
+	 <BLANKLINE>
+ 
+To check for newline in middle:
+	 >>> text_indentation("Hi \n . What are you doing?")
+	 Hi
+	  .
+	 <BLANKLINE>
+	 What are you doing?
+	 <BLANKLINE>
+
+To check for newline at end:
+	 >>> text_indentation("Hi, What are you doing?\n")
+	 Hi, What are you doing?
+	 <BLANKLINE>
+	 <BLANKLINE>
