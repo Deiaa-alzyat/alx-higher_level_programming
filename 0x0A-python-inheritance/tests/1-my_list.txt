@@ -1,0 +1,45 @@
+How to use `MyList`
+Import the class:
+    >>> MyList = __import__('1-my_list').MyList
+
+Testint:
+    >>> my_list = MyList()
+
+    >>> my_list
+    []
+
+    >>> my_list.append(2)
+
+    >>> my_list.append(4)
+
+    >>> my_list.append(6)
+
+    >>> my_list
+    [2, 4, 6]
+
+    >>> my_list.print_sorted()
+    [2, 4, 6]
+
+    >>> my_list
+    [2, 4, 6]
+
+    >>> my_list = MyList([5, 6, 4])
+
+    >>> my_list
+    [5, 6, 4]
+
+    >>> my_list.print_sorted()
+    [4, 5, 6]
+
+    >>> my_list = MyList("welcome")
+    
+    >>> my_list
+    ['w', 'e', 'l', 'c', 'o', 'm', 'e']
+
+    >>> my_list.print_sorted()
+    ['c', 'e', 'e', 'l', 'm', 'o', 'w']
+
+    >>> new_l = MyList()
+
+    >>> new_l.print_sorted()
+    []
