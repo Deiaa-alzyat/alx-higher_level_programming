@@ -72,4 +72,4 @@ class Rectangle(Base):
             (' ' * self.x + '#' * self.width + '\n') * self.height
         print(s, end='')
 
-
+    
