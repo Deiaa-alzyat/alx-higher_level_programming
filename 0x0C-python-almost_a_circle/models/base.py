@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Base class"""
+import csv
+from json import dumps, loads
 
 
 class Base:
@@ -13,4 +15,12 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        '''Jsonifies a dictionary so it's quite rightly and longer.'''
+        if list_dictionaries is None or not list_dictionaries:
+            return "[]"
+        else:
+            return dumps(list_dictionaries)
 
